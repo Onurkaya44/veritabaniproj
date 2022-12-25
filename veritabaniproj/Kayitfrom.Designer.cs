@@ -79,6 +79,7 @@
             this.button2.TabIndex = 13;
             this.button2.Text = "Kayıt Ol";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -105,6 +106,7 @@
             this.Controls.Add(this.label3);
             this.Name = "Kayitfrom";
             this.Text = "Kayitfrom";
+            this.Load += new System.EventHandler(this.Kayitfrom_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

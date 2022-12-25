@@ -47,6 +47,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="bakisform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="bakisform.Designer.cs">
+      <DependentUpon>bakisform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="denizaracformcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="denizaracformcs.Designer.cs">
+      <DependentUpon>denizaracformcs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +77,18 @@
     <Compile Include="kullform.Designer.cs">
       <DependentUpon>kullform.cs</DependentUpon>
     </Compile>
+    <Compile Include="kullkiragos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kullkiragos.Designer.cs">
+      <DependentUpon>kullkiragos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="kullnicikiragos2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kullnicikiragos2.Designer.cs">
+      <DependentUpon>kullnicikiragos2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Secimform.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,11 +103,26 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="bakisform.resx">
+      <DependentUpon>bakisform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="denizaracformcs.resx">
+      <DependentUpon>denizaracformcs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formaracekle.resx">
       <DependentUpon>Formaracekle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kullform.resx">
+      <DependentUpon>kullform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kullkiragos.resx">
+      <DependentUpon>kullkiragos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kullnicikiragos2.resx">
+      <DependentUpon>kullnicikiragos2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Secimform.resx">
       <DependentUpon>Secimform.cs</DependentUpon>

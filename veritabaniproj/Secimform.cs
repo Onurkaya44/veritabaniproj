@@ -30,5 +30,17 @@ namespace veritabaniproj
             form2sec.Show();
             // this.Hide();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            bakisform form2sec = new bakisform();
+            form2sec.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            denizaracformcs form2sec = new denizaracformcs();
+            form2sec.Show();
+        }
     }
 }
