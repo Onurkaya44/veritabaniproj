@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,9 +15,15 @@ namespace veritabaniproj
     {
         public kullkiragos()
         {
+            con = new MySqlConnection("Server=localhost;Database=deneme;Uid=root;Pwd='onur2001';");
+
             InitializeComponent();
         }
-
+        MySqlConnection con;
+        MySqlCommand cmd;
+        MySqlDataReader dr;
+        MySqlDataAdapter adapter;
+        DataTable dt;
         private void button1_Click(object sender, EventArgs e)
         {
 
@@ -24,7 +31,13 @@ namespace veritabaniproj
 
         private void kullkiragos_Load(object sender, EventArgs e)
         {
+            con.Open();
+            string cmd = "select * from arabagetir";
 
+            MySqlDataAdapter da = new MySqlDataAdapter(cmd, con);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
         }
     }
 }
