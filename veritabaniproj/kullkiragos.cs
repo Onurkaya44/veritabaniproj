@@ -24,6 +24,9 @@ namespace veritabaniproj
         MySqlDataReader dr;
         MySqlDataAdapter adapter;
         DataTable dt;
+        int SecilenAracID;
+        int gunsayisi;
+        int toplamucret;
         private void button1_Click(object sender, EventArgs e)
         {
 
@@ -38,6 +41,34 @@ namespace veritabaniproj
             DataTable dt = new DataTable();
             da.Fill(dt);
             dataGridView1.DataSource = dt;
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            MySqlCommand komut = new MySqlCommand("SELECT ucrethesaplaaraba(@p1, @p2)", con);
+            komut.Parameters.AddWithValue("@p1", SecilenAracID);
+            komut.Parameters.AddWithValue("@p2", Convert.ToInt16(textBox1.Text));
+            MySqlDataReader dr = komut.ExecuteReader();
+            if (dr.Read())
+            {
+                toplamucret = Convert.ToInt16(dr[0]);
+
+            }
+            label1.Text = toplamucret.ToString();
+
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int secilen = dataGridView1.SelectedCells[0].RowIndex;
+            SecilenAracID = Convert.ToInt16(dataGridView1.Rows[secilen].Cells[7].Value);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            kullform form2sec = new kullform();
+            form2sec.Show();
+            this.Hide();
         }
     }
 }

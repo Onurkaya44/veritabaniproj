@@ -77,6 +77,7 @@ namespace veritabaniproj
             dr = cmd.ExecuteReader();
             if (dr.Read())
             {
+                
                 this.Hide();
                 kullform frm = new kullform();
                 frm.ShowDialog();

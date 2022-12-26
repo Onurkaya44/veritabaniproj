@@ -28,6 +28,10 @@ namespace veritabaniproj
         MySqlDataAdapter adapter;
         DataTable dt;
         DataTable dtt;
+        DataTable dttt;
+        MySqlCommand cmddd;
+
+
         MySqlCommand cmdd;
 
         private void bakisform_Load(object sender, EventArgs e)
@@ -46,6 +50,13 @@ namespace veritabaniproj
             DataTable dtt = new DataTable();
             daa.Fill(dtt);
             dataGridView2.DataSource = dtt;
+
+            string cmddd = "select * from kulgoster";
+
+            MySqlDataAdapter daaa = new MySqlDataAdapter(cmddd, con);
+            DataTable dttt = new DataTable();
+            daaa.Fill(dttt);
+            dataGridView3.DataSource = dttt;
 
         }
 
